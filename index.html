@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DosMisios Sobre Ruedas</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Arial,sans-serif;background:linear-gradient(160deg,#0b1016,#17232d);color:#fff;display:flex;justify-content:center}
+main{width:min(100%,520px);padding:34px 20px 42px;text-align:center}
+.logo{width:118px;height:118px;margin:0 auto 16px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);display:flex;align-items:center;justify-content:center;font-size:48px}
+h1{font-size:25px;margin:0 0 8px;letter-spacing:.5px}
+.tag{font-size:18px;font-weight:700;margin:0 0 28px}
+a,.button{display:block;width:100%;padding:16px 18px;margin:12px 0;border-radius:16px;text-decoration:none;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.15);font-size:17px;font-weight:700}
+.support{margin-top:24px;padding:22px 16px;border-radius:22px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12)}
+.support h2{margin:0 0 7px;font-size:21px}
+.support p{margin:0 0 16px;color:#d9dfe4}
+.pix{background:#fff;color:#111;border-radius:14px;padding:12px;font-weight:700;word-break:break-all}
+button{width:100%;margin-top:10px;padding:14px;border:0;border-radius:13px;font-size:16px;font-weight:700;cursor:pointer}
+.qr{width:230px;max-width:80%;margin:18px auto 8px;display:block;background:#fff;padding:8px;border-radius:10px}
+.small{font-size:13px;color:#bfc8cf;margin-top:8px}
+footer{margin-top:28px;color:#9da8b0;font-size:13px}
+</style>
+</head>
+<body>
+<main>
+  <div class="logo">🏍️</div>
+  <h1>DOSMISIOS SOBRE RUEDAS</h1>
+  <div class="tag">365 DÍAS PARA PARTIR</div>
+
+  <a href="https://www.tiktok.com/@2misiossobreruedas" target="_blank">🎵 TikTok · @2misiossobreruedas</a>
+  <a href="https://www.instagram.com/2misiossobreruedas" target="_blank">📸 Instagram · @2misiossobreruedas</a>
+  <a href="#" onclick="return false;">▶️ YouTube · Próximamente</a>
+  <a href="https://link.mercadopago.com.ar/2misiossobreruedas" target="_blank">🇦🇷 APOIAR · Mercado Pago</a>
+
+  <section class="support">
+    <h2>🇧🇷 APOIAR NUESTRA VIAJE</h2>
+    <p>Ayudanos a llegar cada vez más lejos 🏍️🌎</p>
+    <div class="pix" id="pix">dosmisiossobreruedas@gmail.com</div>
+    <button onclick="copyPix()">📋 COPIAR PIX</button>
+    <img class="qr" src="pix-qr.png" alt="QR Code Pix">
+    <div class="small">O escaneá el QR Code para apoyar por Pix</div>
+  </section>
+
+  <footer>DosMisios Sobre Ruedas · Nuestra aventura recién comienza</footer>
+</main>
+<script>
+function copyPix(){
+  navigator.clipboard.writeText("dosmisiossobreruedas@gmail.com").then(()=>{
+    const b=document.querySelector("button"); const old=b.textContent;
+    b.textContent="✅ PIX COPIADO";
+    setTimeout(()=>b.textContent=old,1800);
+  });
+}
+</script>
+</body>
+</html>
