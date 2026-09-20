@@ -14,20 +14,46 @@
       font-family:Arial,Helvetica,sans-serif;
       color:#fff;
       background:
-        radial-gradient(circle at 50% 0%,rgba(0,183,255,.14),transparent 32%),
-        radial-gradient(circle at 100% 40%,rgba(255,196,0,.09),transparent 30%),
-        #07090d;
+        radial-gradient(circle at 50% 0%,rgba(0,183,255,.16),transparent 34%),
+        radial-gradient(circle at 100% 40%,rgba(255,196,0,.10),transparent 32%),
+        #05070a;
       line-height:1.55;
+      position:relative;
+      overflow-x:hidden;
+    }
+    body::before{
+      content:"";
+      position:fixed;
+      inset:0;
+      background-image:url("logo.png");
+      background-repeat:no-repeat;
+      background-position:center center;
+      background-size:min(760px,105vw);
+      opacity:.075;
+      filter:grayscale(.15) contrast(1.05);
+      pointer-events:none;
+      z-index:0;
+    }
+    body::after{
+      content:"";
+      position:fixed;
+      inset:0;
+      background:linear-gradient(rgba(5,7,10,.72),rgba(5,7,10,.82));
+      pointer-events:none;
+      z-index:0;
     }
     a{text-decoration:none;color:inherit}
-    .wrap{width:min(920px,92%);margin:auto}
-    header{text-align:center;padding:28px 0 20px}
+    .wrap{width:min(920px,92%);margin:auto;position:relative;z-index:1}
+    header{text-align:center;padding:28px 0 26px}
     .logo{
-      width:min(420px,82vw);
+      width:min(500px,88vw);
+      aspect-ratio:1/1;
+      object-fit:contain;
       display:block;
       margin:0 auto 18px;
       border-radius:50%;
-      filter:drop-shadow(0 12px 28px rgba(0,0,0,.55));
+      filter:drop-shadow(0 16px 35px rgba(0,0,0,.72));
+      border:2px solid rgba(255,210,26,.22);
     }
     h1{font-size:clamp(28px,7vw,52px);margin:4px 0 4px;letter-spacing:1px}
     .subtitle{
@@ -58,9 +84,10 @@
     .section{
       margin:22px 0;
       padding:26px 20px;
-      border:1px solid #303740;
+      border:1px solid rgba(255,255,255,.13);
       border-radius:24px;
-      background:rgba(24,29,36,.86);
+      background:rgba(15,20,26,.91);
+      backdrop-filter:blur(7px);
       box-shadow:0 12px 35px rgba(0,0,0,.2);
     }
     .section h2{
@@ -127,8 +154,7 @@
   <main class="wrap">
     <header>
       <img class="logo" src="logo.png" alt="2 Misioneros Sobre Ruedas">
-      <h1>2 MISIONEROS SOBRE RUEDAS</h1>
-      <p class="subtitle">365 DÍAS PARA PARTIR 🏍️🌎</p>
+      <p class="subtitle" style="margin-top:4px">365 DÍAS PARA PARTIR 🏍️🌎</p>
       <p class="hero-text">
         Somos Mili y Ale, dos misioneros que decidimos empezar de cero en Brasil
         y convertir un sueño en una aventura sobre ruedas.
@@ -144,6 +170,7 @@
 
     <section class="section" id="historia">
       <h2>📖 Nuestra <span>Historia</span></h2>
+      <p style="text-align:center;font-size:18px;color:#fff;font-weight:700">De Posadas, Misiones 🇦🇷 a Itapema, Brasil 🇧🇷. Ahora empieza nuestro camino hacia la ruta. 🏍️</p>
 
       <div class="story-grid">
         <article class="story-card">
