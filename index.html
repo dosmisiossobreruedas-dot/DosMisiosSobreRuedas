@@ -1,32 +1,243 @@
-<!doctype html><html lang="es"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DosMisios Sobre Ruedas</title>
-<style>
-*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Arial,sans-serif;color:#fff}
-body{background:#080b0f url('logo.png') center/cover fixed no-repeat}
-body:before{content:"";position:fixed;inset:0;background:rgba(5,8,12,.72);z-index:-1}
-main{width:min(100%,540px);margin:auto;padding:28px 18px 44px;text-align:center}
-.logo{width:145px;height:145px;object-fit:cover;border-radius:50%;display:block;margin:0 auto 18px;border:3px solid rgba(255,255,255,.85);box-shadow:0 10px 35px rgba(0,0,0,.45)}
-h1{font-size:26px;margin:0 0 7px;text-shadow:0 2px 8px #000}.tag{display:inline-block;font-size:17px;font-weight:800;padding:8px 14px;border-radius:999px;background:#f5a623;color:#111;margin-bottom:22px}
-.links a,.support button{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;padding:16px 18px;margin:11px 0;border-radius:17px;text-decoration:none;color:#fff;background:rgba(12,18,24,.76);border:1px solid rgba(255,255,255,.2);font-size:17px;font-weight:800;box-shadow:0 7px 18px rgba(0,0,0,.24)}
-.support{margin-top:24px;padding:22px 16px 20px;border-radius:23px;background:rgba(8,13,18,.82);border:1px solid rgba(255,255,255,.2)}
-.support h2{margin:0 0 7px;font-size:21px}.support p{margin:0 0 15px;color:#dce3e8}
-.pix{background:#fff;color:#111;border-radius:13px;padding:12px;font-weight:800;word-break:break-all;font-size:15px}
-.support button{border:0;cursor:pointer;margin:10px 0 5px;background:#f5a623;color:#111}
-.qr{width:235px;max-width:82%;display:block;margin:18px auto 8px;background:#fff;padding:8px;border-radius:12px}
-.small{font-size:13px;color:#bfc9d0}footer{margin-top:25px;color:#c0c9cf;font-size:13px}
-</style></head><body><main>
-<img class="logo" src="logo.png" alt="DosMisios Sobre Ruedas">
-<h1>DOSMISIOS SOBRE RUEDAS</h1><div class="tag">365 DÍAS PARA PARTIR 🏍️</div>
-<div class="links">
-<a href="https://www.tiktok.com/@2misiossobreruedas" target="_blank">🎵 TikTok · @2misiossobreruedas</a>
-<a href="https://www.instagram.com/2misiossobreruedas" target="_blank">📸 Instagram · @2misiossobreruedas</a>
-<a href="#" onclick="return false;">▶️ YouTube · Próximamente</a>
-<a href="https://link.mercadopago.com.ar/2misiossobreruedas" target="_blank">🇦🇷 APOYAR · Mercado Pago</a></div>
-<section class="support"><h2>🇧🇷 APOIAR NOSSA VIAGEM</h2><p>Ayudanos a llegar cada vez más lejos 🌎</p>
-<div class="pix">dosmisiossobreruedas@gmail.com</div>
-<button id="copy" onclick="copyPix()">📋 COPIAR PIX</button>
-<img class="qr" src="pix-qr.png" alt="QR Code Pix"><div class="small">O escaneá el QR Code para apoyar por Pix</div>
-</section><footer>DosMisios Sobre Ruedas · Proyecto 365 Días</footer></main>
-<script>function copyPix(){navigator.clipboard.writeText("dosmisiossobreruedas@gmail.com").then(()=>{let b=document.getElementById("copy"),o=b.textContent;b.textContent="✅ PIX COPIADO";setTimeout(()=>b.textContent=o,1800)})}</script>
-</body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="2 Misioneros Sobre Ruedas — Proyecto 365 días. Una pareja misionera preparando su viaje en moto desde Brasil hacia Argentina y América.">
+  <title>2 Misioneros Sobre Ruedas | Proyecto 365 Días</title>
+  <style>
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial,Helvetica,sans-serif;
+      color:#fff;
+      background:
+        radial-gradient(circle at 50% 0%,rgba(0,183,255,.14),transparent 32%),
+        radial-gradient(circle at 100% 40%,rgba(255,196,0,.09),transparent 30%),
+        #07090d;
+      line-height:1.55;
+    }
+    a{text-decoration:none;color:inherit}
+    .wrap{width:min(920px,92%);margin:auto}
+    header{text-align:center;padding:28px 0 20px}
+    .logo{
+      width:min(420px,82vw);
+      display:block;
+      margin:0 auto 18px;
+      border-radius:50%;
+      filter:drop-shadow(0 12px 28px rgba(0,0,0,.55));
+    }
+    h1{font-size:clamp(28px,7vw,52px);margin:4px 0 4px;letter-spacing:1px}
+    .subtitle{
+      margin:0 0 22px;
+      font-weight:800;
+      font-size:clamp(18px,4.5vw,27px);
+      color:#ffd21a;
+    }
+    .hero-text{
+      max-width:700px;
+      margin:auto;
+      color:#d8dce2;
+      font-size:17px;
+    }
+    .socials{display:grid;gap:12px;margin:26px 0}
+    .btn{
+      display:block;
+      padding:16px 18px;
+      border:1px solid #3b424c;
+      border-radius:18px;
+      background:linear-gradient(145deg,#20262e,#151a20);
+      font-weight:800;
+      font-size:17px;
+      box-shadow:0 8px 22px rgba(0,0,0,.22);
+      transition:.2s;
+    }
+    .btn:hover{transform:translateY(-2px);border-color:#00bfff}
+    .section{
+      margin:22px 0;
+      padding:26px 20px;
+      border:1px solid #303740;
+      border-radius:24px;
+      background:rgba(24,29,36,.86);
+      box-shadow:0 12px 35px rgba(0,0,0,.2);
+    }
+    .section h2{
+      margin:0 0 15px;
+      font-size:clamp(24px,6vw,34px);
+      text-align:center;
+    }
+    .section h2 span{color:#ffd21a}
+    .section p{margin:10px 0;color:#dce0e6;font-size:16px}
+    .story-grid{display:grid;gap:14px}
+    .story-card{
+      padding:18px;
+      border-radius:18px;
+      background:#11161c;
+      border:1px solid #303740;
+    }
+    .story-card h3{margin:0 0 7px;font-size:19px;color:#00c2ff}
+    .goal{
+      text-align:center;
+      border-color:#ffd21a;
+      background:linear-gradient(145deg,rgba(255,210,26,.10),rgba(0,194,255,.07));
+    }
+    .goal strong{font-size:25px;color:#ffd21a}
+    .support{text-align:center}
+    .pix-email{
+      display:block;
+      background:#fff;
+      color:#111;
+      padding:15px 10px;
+      border-radius:16px;
+      font-weight:800;
+      word-break:break-word;
+      margin:14px 0 10px;
+    }
+    .copy{
+      width:100%;
+      border:0;
+      border-radius:16px;
+      padding:15px;
+      font-size:16px;
+      font-weight:900;
+      cursor:pointer;
+      background:#f2f2f2;
+      color:#111;
+    }
+    .qr{
+      width:min(320px,85%);
+      display:block;
+      margin:20px auto 4px;
+      background:#fff;
+      padding:10px;
+      border-radius:18px;
+    }
+    .small{color:#aeb5bf;font-size:14px;text-align:center}
+    footer{text-align:center;padding:28px 0 42px;color:#89919d;font-size:14px}
+    .accent{color:#00c2ff;font-weight:800}
+    @media(min-width:700px){
+      .story-grid{grid-template-columns:1fr 1fr}
+      .socials{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header>
+      <img class="logo" src="logo.png" alt="2 Misioneros Sobre Ruedas">
+      <h1>2 MISIONEROS SOBRE RUEDAS</h1>
+      <p class="subtitle">365 DÍAS PARA PARTIR 🏍️🌎</p>
+      <p class="hero-text">
+        Somos Mili y Ale, dos misioneros que decidimos empezar de cero en Brasil
+        y convertir un sueño en una aventura sobre ruedas.
+      </p>
+    </header>
+
+    <nav class="socials" aria-label="Redes sociales">
+      <a class="btn" href="https://www.tiktok.com/@2misiossobreruedas" target="_blank">🎵 TikTok · @2misiossobreruedas</a>
+      <a class="btn" href="https://www.instagram.com/2misiossobreruedas/" target="_blank">📸 Instagram · @2misiossobreruedas</a>
+      <a class="btn" href="#historia">📖 Nuestra historia</a>
+      <a class="btn" href="#apoyar">❤️ Apoyar nuestro viaje</a>
+    </nav>
+
+    <section class="section" id="historia">
+      <h2>📖 Nuestra <span>Historia</span></h2>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <h3>👫 Quiénes somos</h3>
+          <p>
+            Somos Mili y Ale, una pareja de misioneros que comparte el amor por
+            los viajes, las rutas y las ganas de conocer nuevos lugares.
+          </p>
+        </article>
+
+        <article class="story-card">
+          <h3>🇦🇷 De dónde venimos</h3>
+          <p>
+            Nacimos y crecimos en Posadas, Misiones, Argentina. Desde nuestra
+            tierra empezamos a imaginar una vida llena de nuevos caminos.
+          </p>
+        </article>
+
+        <article class="story-card">
+          <h3>🇧🇷 Dónde estamos ahora</h3>
+          <p>
+            Hoy vivimos en Itapema, Santa Catarina, Brasil. Trabajamos,
+            ahorramos día a día y estamos construyendo este proyecto desde cero.
+          </p>
+        </article>
+
+        <article class="story-card">
+          <h3>🏍️ Hasta dónde queremos llegar</h3>
+          <p>
+            Nuestro objetivo es conseguir y preparar una moto para salir a la
+            ruta, recorrer Argentina y después seguir viajando por América.
+            ¿Hasta dónde llegaremos? Eso lo vamos a descubrir juntos.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section goal">
+      <h2>🔥 Proyecto <span>365 Días</span></h2>
+      <p>
+        Durante estos 365 días vamos a mostrar el proceso real: nuestro trabajo,
+        nuestros ahorros, los avances, las dificultades y cada paso hasta estar
+        listos para salir.
+      </p>
+      <p><strong>Un año. Una meta. Miles de kilómetros por delante.</strong></p>
+    </section>
+
+    <section class="section support" id="apoyar">
+      <h2>🤝 Apoyá nuestro <span>viaje</span></h2>
+      <p>
+        Si querés formar parte de esta aventura, podés ayudarnos desde Argentina
+        o Brasil. Cada aporte nos acerca un poquito más a la ruta.
+      </p>
+
+      <a class="btn" href="https://link.mercadopago.com.ar/2misiossobreruedas" target="_blank">
+        🇦🇷 APOYAR · MERCADO PAGO
+      </a>
+
+      <div style="height:12px"></div>
+
+      <div class="story-card">
+        <h3>🇧🇷 APOYAR CON PIX</h3>
+        <p>Podés copiar nuestra clave Pix o escanear el QR.</p>
+        <div class="pix-email" id="pix">dosmisiossobreruedas@gmail.com</div>
+        <button class="copy" onclick="copyPix()">📋 COPIAR PIX</button>
+        <img class="qr" src="pix-qr.png" alt="QR para apoyar por Pix">
+        <p class="small" id="copyMsg">Clave Pix: dosmisiossobreruedas@gmail.com</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>🎥 <span>Seguinos</span> en el camino</h2>
+      <div class="socials">
+        <a class="btn" href="https://www.tiktok.com/@2misiossobreruedas" target="_blank">🎵 TikTok</a>
+        <a class="btn" href="https://www.instagram.com/2misiossobreruedas/" target="_blank">📸 Instagram</a>
+        <div class="btn" style="text-align:center;opacity:.75">▶️ YouTube · Próximamente</div>
+      </div>
+    </section>
+
+    <footer>
+      2 Misioneros Sobre Ruedas · Proyecto 365 Días 🏍️🌎<br>
+      Hecho con ganas de viajar, conocer y compartir el camino.
+    </footer>
+  </main>
+
+  <script>
+    function copyPix(){
+      const pix = "dosmisiossobreruedas@gmail.com";
+      navigator.clipboard.writeText(pix).then(()=>{
+        document.getElementById("copyMsg").textContent = "✅ PIX COPIADO — " + pix;
+      }).catch(()=>{
+        document.getElementById("copyMsg").textContent = "Copiá manualmente: " + pix;
+      });
+    }
+  </script>
+</body>
+</html>
