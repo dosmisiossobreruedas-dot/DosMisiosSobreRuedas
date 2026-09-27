@@ -109,6 +109,9 @@ p:last-child{margin-bottom:0}
 .step span{font-size:12px;opacity:.8}
 .goal{text-align:center;margin-top:14px;font-weight:800;font-size:17px}
 .support{text-align:center}
+.support-card{margin:15px 0;padding:18px 14px;border-radius:15px;background:rgba(255,255,255,.055);border:1px solid rgba(255,255,255,.11)}
+.support-card h3{margin:0 0 8px;font-size:18px}.support-card p{margin-bottom:8px}.support-card .small{font-size:13px;line-height:1.5;opacity:.86}
+
 .support .pixkey{
   display:inline-block;
   margin:7px 0 12px;
@@ -174,15 +177,25 @@ p:last-child{margin-bottom:0}
   </section>
 
   <section class="support">
-    <h2>❤️ APOYÁ EL SUEÑO</h2>
-    <p>Si querés acompañarnos y ayudarnos a acercarnos a nuestro objetivo, podés hacerlo desde acá.</p>
-    <a class="support-btn" href="https://link.mercadopago.com.ar/2misiossobreruedas" target="_blank">🇦🇷 Mercado Pago</a>
-    <div>
-      <div class="pixkey">dosmisiossobreruedas@gmail.com</div>
-      <button class="support-btn copy" onclick="navigator.clipboard.writeText('dosmisiossobreruedas@gmail.com');this.textContent='✅ Pix copiado'">📲 Copiar clave Pix</button>
+    <h2>❤️ APOYÁ NUESTRO PROYECTO</h2>
+    <p>Podés ayudarnos desde Argentina o desde Brasil. Elegí la opción que te resulte más cómoda.</p>
+
+    <div class="support-card">
+      <h3>🇦🇷 Para Argentina</h3>
+      <p><strong>Mercado Pago</strong></p>
+      <p class="small">Si estás en Argentina, podés colaborar directamente desde Mercado Pago.</p>
+      <a class="support-btn" href="https://link.mercadopago.com.ar/2misiossobreruedas" target="_blank">💙 Apoyar por Mercado Pago</a>
     </div>
-    <p style="margin-top:14px">O escaneá el QR:</p>
-    <img class="qr" src="pix-qr.png" alt="QR Pix">
+
+    <div class="support-card">
+      <h3>🇧🇷 Para o Brasil</h3>
+      <p><strong>Apoie nosso projeto pelo Pix</strong></p>
+      <p class="small">Se você está no Brasil, pode nos ajudar através do Pix. Toda contribuição nos aproxima do nosso sonho.</p>
+      <div class="pixkey">dosmisiossobreruedas@gmail.com</div>
+      <button class="support-btn copy" onclick="navigator.clipboard.writeText('dosmisiossobreruedas@gmail.com');this.textContent='✅ Chave Pix copiada'">📲 Copiar chave Pix</button>
+      <p class="small" style="margin-top:15px">Ou escaneie o QR Code:</p>
+      <img class="qr" src="pix-qr.png" alt="QR Code Pix">
+    </div>
   </section>
 
   <section>
